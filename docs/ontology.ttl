@@ -1,0 +1,1059 @@
+@prefix : <http://www.semanticweb.org/juancarlos/ontologies/SmartTourismOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/juancarlos/ontologies/SmartTourismOntology#> .
+
+<http://www.semanticweb.org/juancarlos/ontologies/SmartTourismOntology> rdf:type owl:Ontology ;
+                                                                         owl:versionIRI <http://www.semanticweb.org/juancarlos/ontologies/SmartTourismOntology/1.0.0> ;
+                                                                         <http://purl.org/dc/elements/1.1/creator> "Juan Carlos De Alfonso"@en ;
+                                                                         <http://purl.org/dc/elements/1.1/date> "2025-04-22" ;
+                                                                         <http://purl.org/dc/elements/1.1/description> "This ontology provides tourism information associated with different cities in Spain, including basic information about accommodation and transportation, as well as various entertainment options like restaurants, events, or recreational activities."@en ;
+                                                                         <http://purl.org/dc/elements/1.1/identifier> "http://www.semanticweb.org/juancarlos/ontologies/SmartTourismOntology" ;
+                                                                         <http://purl.org/dc/elements/1.1/title> "Smart Tourism Ontology"@en ;
+                                                                         <http://purl.org/dc/terms/isVersionOf> <http://www.semanticweb.org/juancarlos/ontologies/SmartTourismOntology/> ;
+                                                                         <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
+                                                                         rdfs:comment "This ontology provides tourism information associated with different cities in Spain, including basic information about accommodation and transportation, as well as various entertainment options like restaurants, events, or recreational activities." ;
+                                                                         owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/isVersionOf
+<http://purl.org/dc/terms/isVersionOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionLocatedIn
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionLocatedIn> rdf:type owl:ObjectProperty ;
+                                                                                                   owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasAttraction> ;
+                                                                                                   rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> ;
+                                                                                                   rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                                   rdfs:comment "city where is located a city"@en ;
+                                                                                                   rdfs:label "attraction located in"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasAttraction
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasAttraction> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                                 rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> ;
+                                                                                                 rdfs:comment "attraction that has a city"@en ;
+                                                                                                 rdfs:label "city has attraction"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasCompany
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasCompany> rdf:type owl:ObjectProperty ;
+                                                                                              owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyBasedIn> ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                              rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Company> ;
+                                                                                              rdfs:comment "a company situated in a city"@en ;
+                                                                                              rdfs:label "city has company"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasHotel
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasHotel> rdf:type owl:ObjectProperty ;
+                                                                                            owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelLocatedIn> ;
+                                                                                            rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                            rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                            rdfs:comment "a hotel situated in a city"@en ;
+                                                                                            rdfs:label "city has hotel"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasRestaurant
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasRestaurant> rdf:type owl:ObjectProperty ;
+                                                                                                 owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantLocatedIn> ;
+                                                                                                 rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                                 rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                                 rdfs:comment "a restaurant situated in a city"@en ;
+                                                                                                 rdfs:label "city has restaurant"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHostsEvent
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHostsEvent> rdf:type owl:ObjectProperty ;
+                                                                                              owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventTakesPlaceIn> ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                              rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                              rdfs:comment "en event that takes place in a city"@en ;
+                                                                                              rdfs:label "city hosts event"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> rdf:type owl:ObjectProperty ;
+                                                                                             owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#countryHasCity> ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                             rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Country> ;
+                                                                                             rdfs:comment "Place where a city is located"@en ;
+                                                                                             rdfs:label "Is in country"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyBasedIn
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyBasedIn> rdf:type owl:ObjectProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Company> ;
+                                                                                              rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                              rdfs:comment "a company situated in a city"@en ;
+                                                                                              rdfs:label "company based in"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#countryHasCity
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#countryHasCity> rdf:type owl:ObjectProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Country> ;
+                                                                                              rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                              rdfs:comment "city inside a country"@en ;
+                                                                                              rdfs:label "country has city"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventTakesPlaceIn
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventTakesPlaceIn> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                                 rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                                 rdfs:comment "an event takes place in a city"@en ;
+                                                                                                 rdfs:label "event takes place in"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelLocatedIn
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelLocatedIn> rdf:type owl:ObjectProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                              rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                              rdfs:comment "a hotel located in a country"@en ;
+                                                                                              rdfs:label "hotel located in"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#isCuisineOfferedAt
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#isCuisineOfferedAt> rdf:type owl:ObjectProperty ;
+                                                                                                  owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersCuisine> ;
+                                                                                                  rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality> ;
+                                                                                                  rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                                  rdfs:comment "restaurants where a type of food is offered"@en ;
+                                                                                                  rdfs:label "is cuisine offered"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#isRecommendedTransport
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#isRecommendedTransport> rdf:type owl:ObjectProperty ;
+                                                                                                      owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#recommendedTransport> ;
+                                                                                                      rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport> ;
+                                                                                                      rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                                      rdfs:comment "transport recommended for an event"@en ;
+                                                                                                      rdfs:label "is recommended for event"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersCuisine
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersCuisine> rdf:type owl:ObjectProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                             rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality> ;
+                                                                                             rdfs:comment "offers different cooking options"@en ;
+                                                                                             rdfs:label "Offers cuisine"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersTransportService
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersTransportService> rdf:type owl:ObjectProperty ;
+                                                                                                      owl:inverseOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportServiceIsOfferedBy> ;
+                                                                                                      rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany> ;
+                                                                                                      rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport> ;
+                                                                                                      rdfs:comment "a transport service offered by a company"@en ;
+                                                                                                      rdfs:label "offers transport service"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#recommendedTransport
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#recommendedTransport> rdf:type owl:ObjectProperty ;
+                                                                                                    rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                                    rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport> ;
+                                                                                                    rdfs:comment "Recommended transportation for an event"@en ;
+                                                                                                    rdfs:label "Recommended transport"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantLocatedIn
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantLocatedIn> rdf:type owl:ObjectProperty ;
+                                                                                                   rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                                   rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                                   rdfs:comment "a restaurant situated in a city"@en ;
+                                                                                                   rdfs:label "restaurant located in"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportServiceIsOfferedBy
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportServiceIsOfferedBy> rdf:type owl:ObjectProperty ;
+                                                                                                           rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport> ;
+                                                                                                           rdfs:range <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany> ;
+                                                                                                           rdfs:comment "a transport service offered by a company"@en ;
+                                                                                                           rdfs:label "transport service offered by"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionName> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> ;
+                                                                                              rdfs:range xsd:string ;
+                                                                                              rdfs:comment "name of an attraction"@en ;
+                                                                                              rdfs:label "attraction name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionRating
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionRating> rdf:type owl:DatatypeProperty ;
+                                                                                                rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> ;
+                                                                                                rdfs:range xsd:decimal ;
+                                                                                                rdfs:comment "score 0-5 on an attraction"@en ;
+                                                                                                rdfs:label "attraction rating"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude> rdf:type owl:DatatypeProperty ;
+                                                                                            rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                            rdfs:range xsd:decimal ;
+                                                                                            rdfs:comment "Latitued position"@en ;
+                                                                                            rdfs:label "city longitude"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLongitude
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLongitude> rdf:type owl:DatatypeProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                             rdfs:range xsd:decimal ;
+                                                                                             rdfs:comment "Longitude position"@en ;
+                                                                                             rdfs:label "city latitude"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName> rdf:type owl:DatatypeProperty ;
+                                                                                        rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                        rdfs:range xsd:string ;
+                                                                                        rdfs:comment "Name of the city"@en ;
+                                                                                        rdfs:label "city name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyName> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Company> ;
+                                                                                           rdfs:range xsd:string ;
+                                                                                           rdfs:comment "name of the company"@en ;
+                                                                                           rdfs:label "company name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#countryName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#countryName> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Country> ;
+                                                                                           rdfs:range xsd:string ;
+                                                                                           rdfs:comment "name of the country"@en ;
+                                                                                           rdfs:label "country name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventDate
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventDate> rdf:type owl:DatatypeProperty ;
+                                                                                         rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                         rdfs:range xsd:dateTime ;
+                                                                                         rdfs:comment "date an hour of an event"@en ;
+                                                                                         rdfs:label "event date"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventName> rdf:type owl:DatatypeProperty ;
+                                                                                         rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                         rdfs:range xsd:string ;
+                                                                                         rdfs:comment "The name of the event"@en ;
+                                                                                         rdfs:label "event name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelName> rdf:type owl:DatatypeProperty ;
+                                                                                         rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                         rdfs:range xsd:string ;
+                                                                                         rdfs:comment "name of the hotel"@en ;
+                                                                                         rdfs:label "hotel name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelPriceNight
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelPriceNight> rdf:type owl:DatatypeProperty ;
+                                                                                               rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                               rdfs:range xsd:int ;
+                                                                                               rdfs:comment "price per night of a hotel room"@en ;
+                                                                                               rdfs:label "hotel price night"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelRating
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelRating> rdf:type owl:DatatypeProperty ;
+                                                                                           rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                           rdfs:range xsd:decimal ;
+                                                                                           rdfs:comment "score of the hotel between 0 and 5"@en ;
+                                                                                           rdfs:label "hotel rating"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelStars
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelStars> rdf:type owl:DatatypeProperty ;
+                                                                                          rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                          rdfs:range xsd:int ;
+                                                                                          rdfs:comment "number of stars for a hotel"@en ;
+                                                                                          rdfs:label "hotel stars"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#nationalityName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#nationalityName> rdf:type owl:DatatypeProperty ;
+                                                                                               rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality> ;
+                                                                                               rdfs:range xsd:string ;
+                                                                                               rdfs:comment "name of the nationality"@en ;
+                                                                                               rdfs:label "nationality name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantName> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                              rdfs:range xsd:string ;
+                                                                                              rdfs:comment "name of the restaurant"@en ;
+                                                                                              rdfs:label "restaurant name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantPrice
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantPrice> rdf:type owl:DatatypeProperty ;
+                                                                                               rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                               rdfs:range xsd:int ;
+                                                                                               rdfs:comment "average price for the restaurant"@en ;
+                                                                                               rdfs:label "restaurant price"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantRating
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantRating> rdf:type owl:DatatypeProperty ;
+                                                                                                rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                                rdfs:range xsd:decimal ;
+                                                                                                rdfs:comment "rating between 0 to 5"@en ;
+                                                                                                rdfs:label "restaurant rating"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportName
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportName> rdf:type owl:DatatypeProperty ;
+                                                                                             rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport> ;
+                                                                                             rdfs:range xsd:string ;
+                                                                                             rdfs:comment "name of the transport"@en ;
+                                                                                             rdfs:label "transport name"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportPrice
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportPrice> rdf:type owl:DatatypeProperty ;
+                                                                                              rdfs:domain <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany> ;
+                                                                                              rdfs:range xsd:decimal ;
+                                                                                              rdfs:comment "Price of a ticket"@en ;
+                                                                                              rdfs:label "transport price"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionLocatedIn> ;
+                                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City>
+                                                                                                          ] ;
+                                                                                          rdfs:comment "A place that people visit for pleasure"@en ;
+                                                                                          rdfs:label "Attraction"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#BeachAttraction
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#BeachAttraction> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> ;
+                                                                                               owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MonumentAttraction> ,
+                                                                                                                <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MuseumAttraction> ,
+                                                                                                                <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#ParkAttraction> ;
+                                                                                               rdfs:comment "attractions near the sea"@en ;
+                                                                                               rdfs:label "Beach attraction"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#BeachHotel
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#BeachHotel> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                          owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#BusinessHotel> ,
+                                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#LuxuryHotel> ,
+                                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RuralHotel> ,
+                                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristHotel> ;
+                                                                                          rdfs:comment "A hotel near the beach"@en ;
+                                                                                          rdfs:label "Beach hotel"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#BusinessHotel
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#BusinessHotel> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                             owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#LuxuryHotel> ,
+                                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RuralHotel> ,
+                                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristHotel> ;
+                                                                                             rdfs:comment "A hotel prepared for meetings and business areas"@en ;
+                                                                                             rdfs:label "Business hotel"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> ;
+                                                                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                      owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Country>
+                                                                                                    ] ;
+                                                                                    rdfs:comment "Large town"@en ;
+                                                                                    rdfs:label "City"@en ;
+                                                                                    rdfs:sameAs "http://dbpedia.org/resource/City" .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Company
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Company> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyBasedIn> ;
+                                                                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                         owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City>
+                                                                                                       ] ;
+                                                                                       rdfs:comment "Organization dedicated to industrial activities"@en ;
+                                                                                       rdfs:label "Company"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Country
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Country> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                         owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#countryHasCity> ;
+                                                                                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                         owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City>
+                                                                                                       ] ;
+                                                                                       rdfs:comment "An area of land that has its own government, army, etc."@en ;
+                                                                                       rdfs:label "Country"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#CulturalEvent
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#CulturalEvent> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                             owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#GastronomicEvent> ,
+                                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MusicEvent> ,
+                                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#SportEvent> ,
+                                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TechnologicalEvent> ;
+                                                                                             rdfs:comment "events regarding cultural enrichment"@en ;
+                                                                                             rdfs:label "Cultural event"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventTakesPlaceIn> ;
+                                                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City>
+                                                                                                     ] ;
+                                                                                     rdfs:comment "An occasion something important or unusual"@en ;
+                                                                                     rdfs:label "Event"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#GastronomicEvent
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#GastronomicEvent> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                                owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MusicEvent> ,
+                                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#SportEvent> ,
+                                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TechnologicalEvent> ;
+                                                                                                rdfs:comment "Event where food is served"@en ;
+                                                                                                rdfs:label "Gastronomic event"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelLocatedIn> ;
+                                                                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                       owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City>
+                                                                                                     ] ;
+                                                                                     rdfs:comment "A building where you pay to have a room to sleep in"@en ;
+                                                                                     rdfs:label "Hotel"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#LuxuryHotel
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#LuxuryHotel> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                           owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RuralHotel> ,
+                                                                                                            <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristHotel> ;
+                                                                                           rdfs:comment "A hotel with luxurious activities and features"@en ;
+                                                                                           rdfs:label "Luxury hotel"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MonumentAttraction
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MonumentAttraction> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> ;
+                                                                                                  owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MuseumAttraction> ,
+                                                                                                                   <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#ParkAttraction> ;
+                                                                                                  rdfs:comment "attractions that involves visiting interesting monuments"@en ;
+                                                                                                  rdfs:label "Monument attraction"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MuseumAttraction
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MuseumAttraction> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> ;
+                                                                                                owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#ParkAttraction> ;
+                                                                                                rdfs:comment "Attractions that involves visiting museums"@en ;
+                                                                                                rdfs:label "Museum attraction"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MusicEvent
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MusicEvent> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                          owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#SportEvent> ,
+                                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TechnologicalEvent> ;
+                                                                                          rdfs:comment "event with live music"@en ;
+                                                                                          rdfs:label "Music event"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality> rdf:type owl:Class ;
+                                                                                           rdfs:comment "Belonging to a country"@en ;
+                                                                                           rdfs:label "Nationality"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#ParkAttraction
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#ParkAttraction> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Attraction> ;
+                                                                                              rdfs:comment "Normally they are amusement amusement park"@en ;
+                                                                                              rdfs:label "Park attraction"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RailTransports
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RailTransports> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport> ;
+                                                                                              owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RoadTransports> ;
+                                                                                              rdfs:comment "Transports that goes over rails"@en ;
+                                                                                              rdfs:label "Rail transports"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersCuisine> ;
+                                                                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality>
+                                                                                                          ] ,
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantLocatedIn> ;
+                                                                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City>
+                                                                                                          ] ,
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersCuisine> ;
+                                                                                                            owl:maxQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                                                                                            owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality>
+                                                                                                          ] ;
+                                                                                          rdfs:comment "A place where meals are prepared and served to customers."@en ;
+                                                                                          rdfs:label "Restaurant"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RoadTransports
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RoadTransports> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport> ;
+                                                                                              rdfs:comment "Transports that goes over a road"@en ;
+                                                                                              rdfs:label "Road transports"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RuralHotel
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RuralHotel> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                          owl:disjointWith <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristHotel> ;
+                                                                                          rdfs:comment "A hotel near the forest and the mountain"@en ;
+                                                                                          rdfs:label "Rural hotel"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#SportEvent
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#SportEvent> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                          rdfs:comment "events with live sports"@en ;
+                                                                                          rdfs:label "Sport event"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TechnologicalEvent
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TechnologicalEvent> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                                  rdfs:comment "events with tech presentations like mobiles or PCs"@en ;
+                                                                                                  rdfs:label "Technological event"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TopRatedRestaurant
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TopRatedRestaurant> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                                  rdfs:comment "Restaurants with a score minimum of four"@en ;
+                                                                                                  rdfs:label "Top Rated Restaurant"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristCity
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristCity> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                           rdfs:comment "a city that is a good choice for tourism"@en ;
+                                                                                           rdfs:label "tourist city"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristHotel
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristHotel> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Hotel> ;
+                                                                                            rdfs:comment "A hotel oriented to recreational activities and families"@en ;
+                                                                                            rdfs:label "Tourist hotel"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport> rdf:type owl:Class ;
+                                                                                         rdfs:comment "Ways to move between places"@en ;
+                                                                                         rdfs:label "Transport"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Company> ,
+                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersTransportService> ;
+                                                                                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                  owl:onClass <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Transport>
+                                                                                                                ] ;
+                                                                                                rdfs:comment "Organization that provides with differents transports infraestructure"@en ;
+                                                                                                rdfs:label "Transport company"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#andalusian
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#andalusian> rdf:type owl:NamedIndividual ,
+                                                                                                   <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality> ;
+                                                                                          <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#nationalityName> "Andalusian" ;
+                                                                                          rdfs:comment "From Andalucia"@en ;
+                                                                                          rdfs:label "Andalusian"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bicycle
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bicycle> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RoadTransports> ;
+                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportName> "Bicycle" ;
+                                                                                       rdfs:comment "a non electric transport"@en ;
+                                                                                       rdfs:label "Bicycle"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bilbao
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bilbao> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain> ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude> 43.2630 ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLongitude> -2.9350 ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName> "Bilbao" ;
+                                                                                      rdfs:comment "City in the north or Spain"@en ;
+                                                                                      rdfs:label "Bilbao" .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bilbaoCongress
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bilbaoCongress> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#CulturalEvent> ;
+                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventTakesPlaceIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bilbao> ;
+                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventDate> "2024-12-01T09:00:00"^^xsd:dateTime ;
+                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventName> "Bilbao Congress" ;
+                                                                                              rdfs:comment "important act in Bilbao"@en ;
+                                                                                              rdfs:label "Bilbao Congress"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bus
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#bus> rdf:type owl:NamedIndividual ,
+                                                                                            <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RoadTransports> ;
+                                                                                   <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportName> "Bus" ;
+                                                                                   rdfs:comment "long vehicle for transportation"@en ;
+                                                                                   rdfs:label "Bus"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cadiz
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cadiz> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                     <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain> ;
+                                                                                     <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude> 36.5297 ;
+                                                                                     <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLongitude> -6.2920 ;
+                                                                                     <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName> "Cadiz" ;
+                                                                                     rdfs:comment "City surrounded by sea"@en ;
+                                                                                     rdfs:label "Cadiz" .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cadizCarnaval
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cadizCarnaval> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#SportEvent> ;
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventTakesPlaceIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cadiz> ;
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventDate> "2024-06-02T09:00:00"^^xsd:dateTime ;
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventName> "Cadiz Carnaval" ;
+                                                                                             rdfs:comment "A beautifull carnival in Cadiz"@en ;
+                                                                                             rdfs:label "Cadiz Carnaval"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelVistaSevilla
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelVistaSevilla> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#BeachHotel> ;
+                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelLocatedIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevilla> ;
+                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelName> "Hotel Vista Sevilla" ;
+                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelPriceNight> 278 ;
+                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelRating> 4.7 ;
+                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#hotelStars> 4 ;
+                                                                                                 rdfs:comment "A centric hotel"@en ;
+                                                                                                 rdfs:label "Hotel Vista Sevilla"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#italian
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#italian> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality> ;
+                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#nationalityName> "Italian" ;
+                                                                                       rdfs:comment "From Italy"@en ;
+                                                                                       rdfs:label "Italian"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#japanese
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#japanese> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality> ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#nationalityName> "Japanese" ;
+                                                                                        rdfs:comment "from Japan"@en ;
+                                                                                        rdfs:label "Japanese"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#madrid
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#madrid> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain> ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude> -3.7038 ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLongitude> 40.4168 ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName> "Madrid" ;
+                                                                                      rdfs:comment "Captial of Spain"@en ;
+                                                                                      rdfs:label "Madrid" .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#malaga
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#malaga> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain> ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude> -4.4210 ,
+                                                                                                                                                                                  36.7213 ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName> "Malaga" ;
+                                                                                      rdfs:comment "City in the south of Spain"@en ;
+                                                                                      rdfs:label "Malaga" .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#mediterranean
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#mediterranean> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Nationality> ;
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#nationalityName> "Mediterranean" ;
+                                                                                             rdfs:comment "Related to the south of Europe"@en ;
+                                                                                             rdfs:label "Mediterranean"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#moviCadiz
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#moviCadiz> rdf:type owl:NamedIndividual ,
+                                                                                                  <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany> ;
+                                                                                         <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyBasedIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cadiz> ;
+                                                                                         <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersTransportService> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#subway> ;
+                                                                                         <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyName> "Movi Cadiz" ;
+                                                                                         <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportPrice> 4.63 ;
+                                                                                         rdfs:comment "A transport company"@en ;
+                                                                                         rdfs:label "Movi Cadiz"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#pamplona
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#pamplona> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain> ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude> -1.6444 ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLongitude> 42.8169 ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName> "Pamplona" ;
+                                                                                        rdfs:comment "city ​​in northern Spain"@en ;
+                                                                                        rdfs:label "Pamplona"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantGourmetMadrid
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantGourmetMadrid> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersCuisine> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#japanese> ,
+                                                                                                                                                                                                    <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#mediterranean> ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantLocatedIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#madrid> ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantName> "Restaurant Gourmet Madrid" ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantPrice> 30 ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantRating> 4.3 ;
+                                                                                                       rdfs:comment "A fashion restaurant in Madrid"@en ;
+                                                                                                       rdfs:label "Restaurant Gourmet Madrid"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantTasteZaragoza
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantTasteZaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersCuisine> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#italian> ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantLocatedIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#zaragoza> ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantName> "Restaurant Taste Zaragoza" ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantPrice> 65 ;
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantRating> 3.9 ;
+                                                                                                       rdfs:comment "A traditional restaurant"@en ;
+                                                                                                       rdfs:label "Restaurant Taste Zaragoza"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevilla
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevilla> rdf:type owl:NamedIndividual ,
+                                                                                                <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain> ;
+                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude> -5.9823 ;
+                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLongitude> 37.3886 ;
+                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName> "Sevilla" ;
+                                                                                       rdfs:comment "city ​​in south Spain"@en ;
+                                                                                       rdfs:label "Sevilla"@en ;
+                                                                                       rdfs:sameAs "http://dbpedia.org/resource/Seville"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevillaCarnaval
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevillaCarnaval> rdf:type owl:NamedIndividual ,
+                                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MusicEvent> ;
+                                                                                               <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventTakesPlaceIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevilla> ;
+                                                                                               <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventDate> "2024-05-08T09:00:00"^^xsd:dateTime ;
+                                                                                               <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventName> "Sevilla Carnaval" ;
+                                                                                               rdfs:comment "A beautifull carnaval in Sevilla"@en ;
+                                                                                               rdfs:label "Sevilla Carnaval"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevillaCastle
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevillaCastle> rdf:type owl:NamedIndividual ,
+                                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MonumentAttraction> ;
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionLocatedIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#sevilla> ;
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionName> "Sevilla Castle" ;
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionRating> 4.6 ;
+                                                                                             rdfs:comment "A castle situated in Sevilla"@en ;
+                                                                                             rdfs:label "Sevilla Castle"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Country> ;
+                                                                                     <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#countryName> "Spain" ;
+                                                                                     rdfs:comment "Mediterranean country in Europe"@en ;
+                                                                                     rdfs:label "Spain"@en ;
+                                                                                     rdfs:sameAs "http://dbpedia.org/resource/Spain" .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#subway
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#subway> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RailTransports> ;
+                                                                                      <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportName> "Subway" ;
+                                                                                      rdfs:comment "Underground transport"@en ;
+                                                                                      rdfs:label "Subway"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#taxi
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#taxi> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RoadTransports> ;
+                                                                                    <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportName> "Taxi" ;
+                                                                                    rdfs:comment "car rent transport"@en ;
+                                                                                    rdfs:label "Taxi"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#tram
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#tram> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RailTransports> ;
+                                                                                    <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportName> "Tram" ;
+                                                                                    rdfs:comment "a railway transport"@en ;
+                                                                                    rdfs:label "Tram"@en ;
+                                                                                    rdfs:sameAs "http://dbpedia.org/resource/Tram"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transToledo
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transToledo> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany> ;
+                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersTransportService> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#tram> ;
+                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyName> "Trans Toledo" ;
+                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportPrice> 3.61 ;
+                                                                                           rdfs:comment "A transport company in Toledoe"@en ;
+                                                                                           rdfs:label "Trans Toledo"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#urbanMadrid
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#urbanMadrid> rdf:type owl:NamedIndividual ,
+                                                                                                    <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany> ;
+                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersTransportService> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#subway> ;
+                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyName> "Urban Madrid" ;
+                                                                                           <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#transportPrice> 8.85 ;
+                                                                                           rdfs:comment "A transport company in Madrid"@en ;
+                                                                                           rdfs:label "Urban Madrid"@en .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#zaragoza
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#zaragoza> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#City> ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityInCountry> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#spain> ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLatitude> 41.6488 ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityLongitude> -0.8891 ;
+                                                                                        <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityName> "Zaragoza" ;
+                                                                                        rdfs:comment "City in the south os Spain"@en ;
+                                                                                        rdfs:label "Zaragoza" .
+
+
+###  http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#zaragozaCastle
+<http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#zaragozaCastle> rdf:type owl:NamedIndividual ,
+                                                                                                       <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#MuseumAttraction> ;
+                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionLocatedIn> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#zaragoza> ;
+                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionName> "Zaragoza Castle" ;
+                                                                                              <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#attractionRating> 3.7 ;
+                                                                                              rdfs:comment "beautiful castle in Zaragoza"@en ;
+                                                                                              rdfs:label "Zaragoza Castle"@en .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#score> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#t> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#e> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#co> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Restaurant> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#restaurantRating> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#score>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#score> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4.0 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TopRatedRestaurant> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#RailTransports> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#eventTakesPlaceIn> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#e> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#companyBasedIn> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#co> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#offersTransportService> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#co> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#t>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TransportCompany> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#co>
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#Event> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#e>
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#isRecommendedTransport> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#t> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasHotel> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHasAttraction> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#a>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#cityHostsEvent> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#e>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/juancarlos/ontologies/2025/3/SmartTourismOntology#TouristCity> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
